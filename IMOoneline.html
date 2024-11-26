@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMOの問題を1行で解く</title>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js">
+</script><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section>
+<h1>IMOの問題を1行で解く</h1>
+
+<p>今回解くのは，1971年 第13回 国際数学オリンピック チェコスロバキア大会の第5問です．</p>
+
+<div class="textbox">
+<h2>問題</h2>
+<p>任意の自然数\(m\)にたいして, 以下の性質をもつような, 平面上の点からなる有限集合\(S\)が存在することを証明せよ:</p>
+<p>\(S\)に属する任意の点\(A\)にたいし, \(S\)に属する丁度\(m\)個の点が存在して, \(A\)からの距離はすべて\(1\)である.</p>
+</div>
+<div class="textbox"><h2>解答</h2><p>任意の自然数\(m\)に対して，空集合\(\emptyset\)が条件を満たす有限集合\(S\)となる．\(\square\)</p></div>
+
+<p>空虚な真(\(\forall x \in \emptyset \phi (x)\)は常に真)により自明な問題です．
+おそらく出題者の想定では空でない有限集合\(S\)だったのでしょう．
+IMOの公式サイトからダウンロードした英語版の問題のpdfでは以下のようになっていて，これにもnonemptyなどの単語はありませんでした．</p>
+<div class="textbox">
+<h2>1971/5.</h2>
+<p>Prove that for every natural number \(m\), there exists a finite set \(S\) of points
+in a plane with the following property:</p>
+<p>For every point \(A\) in \(S\), there are
+exactly \(m\) points in \(S\) which are at unit distance from \(A\).</p>
+</div>
+
+<hr>
+<p>出題者が想定していたであろう問題と，ネットで見つけたその問題に対するきれいな解答を載せておきます．</p>
+<div class="textbox">
+<h2>問題</h2>
+<p>任意の自然数\(m\)にたいして, 以下の性質をもつような, 平面上の点からなる<span class="red">空でない</span>有限集合\(S\)が存在することを証明せよ:</p>
+<p>\(S\)に属する任意の点\(A\)にたいし, \(S\)に属する丁度\(m\)個の点が存在して, \(A\)からの距離はすべて\(1\)である.</p>
+</div>
+<div class="textbox">
+<h2>解答</h2>
+<p>自然数\(m\)を固定する．</p>
+<p>\(V\subset \mathbb{R}^2\)を長さが1のベクトルからなり，次の条件を満たす\(m\)元集合とする．</p>
+<p>任意の\(W\subset V\)に対し，\(\left|W\right|>1\)のとき\(\displaystyle\left|\sum_{v\in W}v\right|\neq 0,1\)．</p>
+<p>このような集合\(V\)が存在することはかんたんにわかる．実際，超限再起によって（選択公理無しで）このような集合を構成できる．</p>
+<p>このとき，\(\displaystyle S:=\left\{\sum_{v\in W}v \Bigg| W\subset V \right\}\)は条件を満たす．</p>
+<p>\(\because\) 任意の\(\displaystyle\sum_{v \in W}v \in S\)に対し，各\(v'\in V\)に対する\(\displaystyle\sum_{v \in W\triangle \{v'\}}v\)のみが距離1となる．
+(\(\triangle\)は対称差 \(A\triangle B:=(A-B)\cup(B-A)\)) \(\square\)</p>
+</div>
+
+
+
+</section>
+
+
+</body>
+</html>
